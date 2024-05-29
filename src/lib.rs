@@ -2338,7 +2338,6 @@ impl Build {
                         } else if arch.starts_with("32") {
                             if target.contains("linux") {
                                 cmd.args.push(("-march=rv32gc").into());
-                                cmd.args.push("-mabi=ilp32d".into());
                             } else {
                                 cmd.args.push(("-march=rv".to_owned() + arch).into());
                                 cmd.args.push("-mabi=ilp32".into());
